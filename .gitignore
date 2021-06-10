@@ -127,3 +127,16 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# vscode
+.vscode
+
+# dask
+dask-worker-space/
+mydask.png
+
+# myst_nb
+docs/jupyter_execute/
+docs/generated/
+docs/tutorials/**/**/*.json
+docs/tutorials/**/**/*.xlsx
