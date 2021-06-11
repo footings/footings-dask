@@ -1,0 +1,6 @@
+﻿footings\_dask.create\_dask\_foreach\_jig
+=========================================
+
+.. currentmodule:: footings_dask
+
+.. autofunction:: create_dask_foreach_jig
