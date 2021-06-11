@@ -24,15 +24,19 @@ def create_dask_foreach_jig(
     dask_delayed_kwargs: Optional[Dict] = None,
     dask_compute_kwargs: Optional[Dict] = None,
 ):
-    """Create a dask backed ForeachJig that runs a WrappedModel or MappedModels for each item in an iterator.
+    """Create a dask backed ForeachJig that runs a WrappedModel or MappedModels for each item in
+    an iterator.
 
-    :param model: The models to call.
-    :type model: Union[WrappedModel, MappedModel]
+    :param Union[WrappedModel, MappedModel] model: The model or model mapping to call.
     :param str iterator_name: The name to assign the iterator to be passed (will be used in
         signature of the returned model).
-    :param Optional[Tuple] mapped_keys: The keys to be used to lookup the model in mapping.
+    :param tuple iterator_keys: The keys within the iterator that unique define the record.
+    :param Optional[Tuple] mapped_keys: The keys to be used to lookup the model if the model
+        is a MappedModel.
     :param Optional[Tuple] constant_params: The parameter names which will be constant for all
         items in the iterator.
+    :param Optional[Tuple] pass_iterator_keys: Any iterator_keys to pass into the model
+        (by default no iterator keys are passed).
     :param Optional[Callable] success_wrap: An optional function to call upon running the model
         on the items that returned without error (note if none return without error an empty
         list is returned).
