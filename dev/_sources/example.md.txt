@@ -47,7 +47,7 @@ class PvPremium:
             ])
 
         self.ret = pd.DataFrame({
-            "POLICY_ID": [self.policy_id], 
+            "POLICY_ID": [self.policy_id],
             "PV_PREMIUM": [discount()]
         })
 
@@ -76,25 +76,25 @@ foreach_model = create_dask_foreach_jig(
 
 A note on the parameters -
 
-- `model` - represents the model which we want to run repeatedly 
-- `iterator_name` - the name to assign the iterator to be passed 
-- `iterator_keys` - the keys that form the unique id for a each iterator  
+- `model` - represents the model which we want to run repeatedly
+- `iterator_name` - the name to assign the iterator to be passed
+- `iterator_keys` - the keys that form the unique id for a each iterator
 - `pass_iterator_keys` - the iterator_keys to pass into the model
 - `constant_params` - any parameters that are constant (i.e., same across all iterations)
 - `success_wrap` - the function to apply at the end to the iterations that have been successfully run
 
 
-Some of the parameters make more sense if the signature is inspected as the code snippet below shows. 
+Some of the parameters make more sense if the signature is inspected as the code snippet below shows.
 
 ```{code-cell} ipython3
 from inspect import signature
 signature(foreach_model)
 ```
 
-The function takes two parameters - 
+The function takes two parameters -
 
-- `records` which was assigned by the parameter `iterator_name` and 
-- `interest_rate` which was assigned by the parameter `constant_params`. 
+- `records` which was assigned by the parameter `iterator_name` and
+- `interest_rate` which was assigned by the parameter `constant_params`.
 
 `records` is the `iterator` that will be passed to the model which will contain the `policy_id` and their associated `premium`. `interest_rate` is a constant parameter used across all iterations.
 

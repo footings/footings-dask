@@ -13,7 +13,7 @@ Footings-dask is a parallel back end that can be used to parallelize computation
 
 ## Purpose
 
-The [footings](https://footings.github.io/footings/master/index.html) framework was developed with the intention of making it easier to develop actuarial models in Python. Often times the computation behind an actuarial model can be considered an embarrassingly parallel problem where we have to do the same computation for many policyholders. Thus, model computation time can be improved by distributing the workload and running computations in parallel. The `footings-dask` library was created to make it easier to parallelize a model built using the `footings` framework. 
+The [footings](https://footings.github.io/footings/master/index.html) framework was developed with the intention of making it easier to develop actuarial models in Python. Often times the computation behind an actuarial model can be considered an embarrassingly parallel problem where we have to do the same computation for many policyholders. Thus, model computation time can be improved by distributing the workload and running computations in parallel. The `footings-dask` library was created to make it easier to parallelize a model built using the `footings` framework.
 
 ## Installation
 
