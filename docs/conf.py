@@ -74,9 +74,7 @@ html_theme = "pydata_sphinx_theme"
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ["_static"]
 
-html_sidebars = {
-    "**": ["search-field.html", "sidebar-nav-bs.html"]
-}
+html_sidebars = {"**": ["search-field.html", "sidebar-nav-bs.html"]}
 
 html_theme_options = {
     "github_url": "https://github.com/footings/footings-dask",

@@ -1,7 +1,6 @@
 from typing import Callable, Dict, Optional, Tuple
 
 from dask import compute, delayed
-
 from footings.jigs import ForeachJig, MappedModel, WrappedModel
 
 __all__ = ["create_dask_foreach_jig"]
